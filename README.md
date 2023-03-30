@@ -3,7 +3,7 @@
 ## Module 1: Introduction to Data Structures and Algorithms
 - [1.1: Importance of data structures and algorithms](/docs/module-1/1-1-Importance-of-data-structures-and-algorithms.md)
 - [1.2: Time and space complexity analysis](/docs/module-1/1-2-Time-and-space-complexity-analysis.md)
-- 1.3: Big O notation
+- [1.3: Big O notation](/docs/module-1/1-3-Big-O-Notation.md)
 
 ## Module 2: Basic Data Structures
 - 2.1: Arrays
