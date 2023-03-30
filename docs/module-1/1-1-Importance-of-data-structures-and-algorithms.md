@@ -1,66 +1,115 @@
-# Lesson 1.1: Importance of Data Structures and Algorithms
+## Module 1: Introduction to Data Structures and Algorithms
 
-## Description
-Data structures and algorithms are essential building blocks in computer science and software development. They allow us to store, organize, and manipulate data efficiently. Data structures are ways of organizing and storing data, while algorithms are step-by-step procedures for performing a specific task or solving a particular problem. Choosing the right data structure and algorithm can have a significant impact on the performance and efficiency of a program.
+### Lesson 1.1: Importance of Data Structures and Algorithms
 
-## Generic Code Example
+Data structures and algorithms are fundamental to computer science. They provide the building blocks for all software systems, and they are essential for solving complex problems.
 
-Here's an example of a simple algorithm in Java to find the maximum value in an array.
+A data structure is a way of organizing data so that it can be easily accessed and manipulated. Some common data structures include arrays, linked lists, stacks, and queues.
 
-```java
-public class MaxValue {
+An algorithm is a step-by-step procedure for solving a problem. Some common algorithms include sorting, searching, and graph traversal.
 
-    public static void main(String[] args) {
-        int[] numbers = {4, 8, 2, 15, 7};
-        System.out.println("Maximum value: " + findMax(numbers));
-    }
+Data structures and algorithms are important because they can make a big difference in the performance of a software system. A well-designed data structure can make a problem much easier to solve, and a well-chosen algorithm can make a program run much faster.
 
-    public static int findMax(int[] arr) {
-        int max = arr[0];
+### Generic Code Example
 
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-            }
-        }
+The following code shows how to implement a simple stack data structure in Java:
 
-        return max;
-    }
+```
+class Stack {
+
+  private int[] data;
+  private int top;
+
+  public Stack() {
+    data = new int[10];
+    top = -1;
+  }
+
+  public void push(int item) {
+    top++;
+    data[top] = item;
+  }
+
+  public int pop() {
+    int item = data[top];
+    top--;
+    return item;
+  }
+
+  public boolean isEmpty() {
+    return top == -1;
+  }
 }
 ```
 
-## Real World Code Example
+This code shows how to implement a simple stack data structure using an array. The `data` array stores the items in the stack, and the `top` variable keeps track of the current position of the top item on the stack.
 
-Consider a social media application where users can add friends. To efficiently find and display a user's friends, we can use a HashMap data structure, which allows for fast lookups. The following code demonstrates this concept:
+To push an item onto the stack, the `push()` method first increments the `top` variable and then stores the item in the `data` array at the specified index. To pop an item off the stack, the `pop()` method first decrements the `top` variable and then returns the item at the specified index.
 
-```java
-import java.util.HashMap;
+### Real World Code Example
 
-public class SocialMediaApp {
+The following code shows how to use a stack to implement a simple calculator:
 
-    public static void main(String[] args) {
-        HashMap<String, String[]> friendsList = new HashMap<>();
+```
+class Calculator {
 
-        String[] user1Friends = {"user2", "user3", "user4"};
-        String[] user2Friends = {"user1", "user4", "user5"};
-        String[] user3Friends = {"user1", "user5"};
+  private Stack<String> operators;
+  private Stack<Integer> operands;
 
-        friendsList.put("user1", user1Friends);
-        friendsList.put("user2", user2Friends);
-        friendsList.put("user3", user3Friends);
+  public void push(String operator) {
+    operators.push(operator);
+  }
 
-        displayFriends("user1", friendsList);
+  public void push(int operand) {
+    operands.push(operand);
+  }
+
+  public int pop() {
+    int result = operands.pop();
+    if (!operators.isEmpty()) {
+      String operator = operators.pop();
+      switch (operator) {
+        case "+":
+          result += operands.pop();
+          break;
+        case "-":
+          result -= operands.pop();
+          break;
+        case "*":
+          result *= operands.pop();
+          break;
+        case "/":
+          result /= operands.pop();
+          break;
+      }
     }
+    return result;
+  }
 
-    public static void displayFriends(String user, HashMap<String, String[]> friendsList) {
-        String[] friends = friendsList.get(user);
-
-        System.out.println(user + "'s friends:");
-        for (String friend : friends) {
-            System.out.println(friend);
-        }
+  public int calculate() {
+    int result = 0;
+    while (!operators.isEmpty()) {
+      result = pop();
     }
+    return result;
+  }
 }
 ```
 
-In this example, we use a HashMap to store each user's friends list. The HashMap maps a user's identifier (a String) to an array of their friends' identifiers (String[]). We populate the HashMap with some sample data for three users and their respective friends. The `displayFriends` method retrieves the friends list of a given user from the HashMap and iterates through it, printing out each friend's identifier. This real-world example demonstrates the importance of selecting the appropriate data structure to optimize the performance of a program.
+This code shows how to use a stack to implement a simple calculator. The `operators` stack stores the operators, and the `operands` stack stores the operands.
+
+To push an operator onto the stack, the `push()` method first stores the operator in the `operators` stack. To push an operand onto the stack, the `push()` method first stores the operand in the `operands` stack.
+
+To pop an item off the stack, the `pop()` method first pops the top item off the `operators` stack and then pops the top item off the `operands` stack. The `calculate()` method pops all of the items off of the `operators` stack and then performs the specified operation on the operands.
+
+The following code shows how to use the calculator:
+
+```
+Calculator calculator = new Calculator();
+calculator.push("+");
+calculator.push(5);
+calculator.push(6);
+System.out.println(calculator.calculate()); // prints 11
+```
+
+This code pushes the `+` operator, the number 5, and the number 6 onto the calculator's stack. The `calculate()` method then pops the `+` operator off of the stack and performs the addition operation on the operands. The result is printed to the console.
