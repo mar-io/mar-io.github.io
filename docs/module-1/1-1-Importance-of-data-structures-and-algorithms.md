@@ -104,7 +104,7 @@ To pop an item off the stack, the `pop()` method first pops the top item off the
 
 The following code shows how to use the calculator:
 
-```
+```java
 Calculator calculator = new Calculator();
 calculator.push("+");
 calculator.push(5);
