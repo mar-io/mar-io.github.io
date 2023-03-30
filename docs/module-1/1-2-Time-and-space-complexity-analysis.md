@@ -1,62 +1,79 @@
-# Lesson 1.2: Time and Space Complexity Analysis
+## Module 1: Introduction to Data Structures and Algorithms
 
-## Description
-Time and space complexity analysis is a crucial part of understanding how efficient an algorithm is. Time complexity represents the amount of time an algorithm takes to complete as the input size increases, while space complexity represents the amount of memory consumed by the algorithm as the input size increases. Analyzing these complexities helps developers select the most suitable data structures and algorithms for a particular problem, ensuring optimal performance and resource usage.
+### Lesson 1.2: Time and Space Complexity Analysis
 
-## Generic Code Example
+In computer science, **time complexity** is the amount of time it takes for an algorithm to run, as a function of the size of the input. **Space complexity** is the amount of memory it takes for an algorithm to run, as a function of the size of the input.
 
-Here's an example of a simple algorithm in Java that calculates the sum of all elements in an array. We will analyze its time and space complexity.
+Time and space complexity are important considerations in algorithm design. An algorithm with a high time complexity may not be practical to use for large inputs, while an algorithm with a high space complexity may not be practical to use for large inputs or for devices with limited memory.
+
+There are a number of different ways to analyze the time and space complexity of an algorithm. One common approach is to use **Big O notation**. Big O notation is a way of expressing the asymptotic behavior of an algorithm. In other words, it tells you how the running time or space usage of an algorithm grows as the input size gets larger.
+
+For example, an algorithm that runs in constant time has a time complexity of O(1). This means that the running time of the algorithm does not depend on the size of the input. An algorithm that runs in linear time has a time complexity of O(n), where n is the size of the input. This means that the running time of the algorithm is proportional to the size of the input.
+
+There are a number of different algorithms that have different time and space complexities. Some algorithms are designed to be fast, while others are designed to be space-efficient. The choice of algorithm depends on the specific problem being solved and the resources available.
+
+### Generic Code Example
+
+The following code shows a simple algorithm that takes a list of numbers as input and prints the sum of the numbers:
 
 ```java
-public class ArraySum {
+public class SumOfNumbers {
 
-    public static void main(String[] args) {
-        int[] numbers = {1, 2, 3, 4, 5};
-        System.out.println("Sum: " + calculateSum(numbers));
+  public static void main(String[] args) {
+    int[] numbers = {1, 2, 3, 4, 5};
+    int sum = 0;
+    for (int number : numbers) {
+      sum += number;
     }
-
-    public static int calculateSum(int[] arr) {
-        int sum = 0;
-        for (int value : arr) {
-            sum += value;
-        }
-        return sum;
-    }
+    System.out.println(sum);
+  }
 }
 ```
 
-**Explanation**: In this example, the `calculateSum` method iterates through each element of the input array once, so its time complexity is O(n), where n is the number of elements in the array. The space complexity is O(1) because the method uses a constant amount of additional memory (an integer variable `sum`) regardless of the input size.
+The time complexity of this algorithm is O(n), where n is the number of numbers in the list. This is because the algorithm has to iterate through the list of numbers once for each number in the list.
 
-## Real World Code Example
+The space complexity of this algorithm is O(1), because it only requires a constant amount of memory to store the sum of the numbers.
 
-Consider a scenario where we need to find the common elements between two integer arrays. The following code demonstrates this concept:
+### Real World Code Example
+
+The following code shows a real-world example of an algorithm that is used to sort a list of numbers:
 
 ```java
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
+public class QuickSort {
 
-public class CommonElements {
-
-    public static void main(String[] args) {
-        int[] array1 = {1, 2, 3, 4, 5};
-        int[] array2 = {4, 5, 6, 7, 8};
-        System.out.println("Common elements: " + findCommonElements(array1, array2));
+  public static void sort(int[] numbers) {
+    if (numbers.length <= 1) {
+      return;
     }
 
-    public static ArrayList<Integer> findCommonElements(int[] arr1, int[] arr2) {
-        HashSet<Integer> set1 = new HashSet<>(Arrays.asList(Arrays.stream(arr1).boxed().toArray(Integer[]::new)));
-        ArrayList<Integer> commonElements = new ArrayList<>();
+    int pivot = numbers[numbers.length / 2];
+    int left = 0;
+    int right = numbers.length - 1;
 
-        for (int value : arr2) {
-            if (set1.contains(value)) {
-                commonElements.add(value);
-            }
-        }
+    while (left <= right) {
+      while (numbers[left] < pivot) {
+        left++;
+      }
+      while (numbers[right] > pivot) {
+        right--;
+      }
 
-        return commonElements;
+      if (left <= right) {
+        int temp = numbers[left];
+        numbers[left] = numbers[right];
+        numbers[right] = temp;
+
+        left++;
+        right--;
+      }
     }
+
+    quickSort(numbers, 0, left - 1);
+    quickSort(numbers, right + 1, numbers.length - 1);
+  }
 }
 ```
 
-**Explanation**: In this real-world example, we use a HashSet to store the elements of the first array, taking advantage of its fast O(1) lookup time. We then iterate through the second array, checking if each element exists in the HashSet. If it does, we add it to the ArrayList of common elements. The time complexity of this algorithm is O(n + m), where n and m are the sizes of the input arrays. The space complexity is O(n) because we use a HashSet to store the elements of the first array.
+The time complexity of this algorithm is O(n log n), where n is the number of numbers in the list. This is because the algorithm has to divide the list in half and then recursively sort the two halves.
+
+The space complexity of this algorithm is O(log n), because it requires a constant amount of memory to store the pivot and the two halves of the list.
