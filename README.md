@@ -6,7 +6,7 @@
 - [1.3: Big O notation](/docs/module-1/1-3-Big-O-Notation.md)
 
 ## Module 2: Basic Data Structures
-- 2.1: Arrays
+- [2.1: Arrays](/docs/module-2/2-1-Arrays.md)
   - Introduction to arrays
   - Common array operations
   - Multidimensional arrays
