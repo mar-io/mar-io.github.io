@@ -14,7 +14,7 @@ Data structures and algorithms are important because they can make a big differe
 
 The following code shows how to implement a simple stack data structure in Java:
 
-```
+```java
 class Stack {
 
   private int[] data;
@@ -50,7 +50,7 @@ To push an item onto the stack, the `push()` method first increments the `top` v
 
 The following code shows how to use a stack to implement a simple calculator:
 
-```
+```java
 class Calculator {
 
   private Stack<String> operators;
