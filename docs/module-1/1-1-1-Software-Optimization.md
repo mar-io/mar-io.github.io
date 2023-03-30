@@ -6,7 +6,7 @@ Here's a simple example in Java, demonstrating the difference between an optimiz
 
 **Non-optimized code:**
 
-\```java
+```java
 public class NonOptimizedSum {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -21,13 +21,13 @@ public class NonOptimizedSum {
         System.out.println("Sum: " + sum);
     }
 }
-\```
+```
 
 In this non-optimized example, we're using a nested loop to calculate the sum of the numbers array. The inner loop runs 1,000,000 times for each element in the array, making the code inefficient and time-consuming.
 
 **Optimized code:**
 
-\```java
+```java
 public class OptimizedSum {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -41,7 +41,7 @@ public class OptimizedSum {
         System.out.println("Sum: " + sum);
     }
 }
-\```
+```
 
 In the optimized version, we calculate the sum of the numbers array in a single loop and then multiply the result by 1,000,000. This approach significantly reduces the number of iterations and improves the code's efficiency.
 
