@@ -1,4 +1,4 @@
-# Data Structures and Algorithms
+# Data Structures and Algorithms w/ Java
 
 This e-book covers the essential data structures and algorithms using Java code examples, starting with the basics and progressing to more advanced topics. It provides a solid foundation in the key concepts and skills needed to solve complex problems in computer science and software development.
 
