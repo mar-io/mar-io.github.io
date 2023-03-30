@@ -1,4 +1,4 @@
-# Module 1, Section 1.2: Time and Space Complexity Analysis with Big O Notation
+# Section 1.2: Time and Space Complexity Analysis with Big O Notation
 
 In this section, we will discuss time and space complexity analysis using Big O notation. This is a fundamental concept in computer science and programming, which helps us to evaluate the performance of algorithms in terms of their resource utilization. By understanding time and space complexity, we can select the most efficient algorithms for our tasks and optimize our code accordingly. We will explore the concept of asymptotic analysis and learn about best, average, and worst-case complexities. Additionally, we will discuss time and space complexities and their real-world implications.
 
