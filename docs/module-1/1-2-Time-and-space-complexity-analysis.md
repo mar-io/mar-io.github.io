@@ -1,79 +1,58 @@
-## Module 1: Introduction to Data Structures and Algorithms
+**Module 1, Lesson 1.2: Time and Space Complexity Analysis**
 
-### Lesson 1.2: Time and Space Complexity Analysis
+In computer science, time complexity and space complexity are two important measures of the efficiency of an algorithm. Time complexity is the amount of time it takes an algorithm to run, as a function of the size of the input. Space complexity is the amount of memory an algorithm uses, as a function of the size of the input.
 
-In computer science, **time complexity** is the amount of time it takes for an algorithm to run, as a function of the size of the input. **Space complexity** is the amount of memory it takes for an algorithm to run, as a function of the size of the input.
+## Time Complexity
 
-Time and space complexity are important considerations in algorithm design. An algorithm with a high time complexity may not be practical to use for large inputs, while an algorithm with a high space complexity may not be practical to use for large inputs or for devices with limited memory.
+There are three main types of time complexity:
 
-There are a number of different ways to analyze the time and space complexity of an algorithm. One common approach is to use **Big O notation**. Big O notation is a way of expressing the asymptotic behavior of an algorithm. In other words, it tells you how the running time or space usage of an algorithm grows as the input size gets larger.
+* **O(1)**: The algorithm takes a constant amount of time to run, regardless of the size of the input.
+* **O(n)**: The algorithm takes time proportional to the size of the input. For example, an algorithm that sorts a list of n numbers takes time proportional to n, or O(n).
+* **O(n2)**: The algorithm takes time proportional to the square of the size of the input. For example, an algorithm that searches for a number in a list of n numbers takes time proportional to n2, or O(n2).
 
-For example, an algorithm that runs in constant time has a time complexity of O(1). This means that the running time of the algorithm does not depend on the size of the input. An algorithm that runs in linear time has a time complexity of O(n), where n is the size of the input. This means that the running time of the algorithm is proportional to the size of the input.
+## Space Complexity
 
-There are a number of different algorithms that have different time and space complexities. Some algorithms are designed to be fast, while others are designed to be space-efficient. The choice of algorithm depends on the specific problem being solved and the resources available.
+There are two main types of space complexity:
 
-### Generic Code Example
+* **O(1)**: The algorithm uses a constant amount of space, regardless of the size of the input.
+* **O(n)**: The algorithm uses space proportional to the size of the input. For example, an algorithm that stores a list of n numbers in memory uses space proportional to n, or O(n).
 
-The following code shows a simple algorithm that takes a list of numbers as input and prints the sum of the numbers:
+## Generic Code Example
+
+The following code snippet shows an example of a function that takes a list of numbers as input and returns the sum of the numbers in the list. The function is implemented in Java and uses a for loop to iterate over the list of numbers. The time complexity of the function is O(n), where n is the number of numbers in the list. The space complexity of the function is O(1), since the function only uses a constant amount of space to store the list of numbers and the sum of the numbers.
 
 ```java
-public class SumOfNumbers {
+public int sum(List<Integer> numbers) {
+  int sum = 0;
+  for (int number : numbers) {
+    sum += number;
+  }
+  return sum;
+}
+```
 
-  public static void main(String[] args) {
-    int[] numbers = {1, 2, 3, 4, 5};
-    int sum = 0;
-    for (int number : numbers) {
-      sum += number;
+## Real World Code Example
+
+The following code snippet shows an example of a function that implements a bubble sort algorithm. The function is implemented in Java and uses a for loop to iterate over the list of numbers. The function compares each pair of adjacent numbers in the list and swaps them if they are in the wrong order. The time complexity of the function is O(n2), where n is the number of numbers in the list. The space complexity of the function is O(1), since the function only uses a constant amount of space to store the list of numbers.
+
+```java
+public void bubbleSort(List<Integer> numbers) {
+  for (int i = 0; i < numbers.size() - 1; i++) {
+    for (int j = 0; j < numbers.size() - i - 1; j++) {
+      if (numbers.get(j) > numbers.get(j + 1)) {
+        int temp = numbers.get(j);
+        numbers.set(j, numbers.get(j + 1));
+        numbers.set(j + 1, temp);
+      }
     }
-    System.out.println(sum);
   }
 }
 ```
 
-The time complexity of this algorithm is O(n), where n is the number of numbers in the list. This is because the algorithm has to iterate through the list of numbers once for each number in the list.
+## Explanation
 
-The space complexity of this algorithm is O(1), because it only requires a constant amount of memory to store the sum of the numbers.
+The time complexity of an algorithm is the amount of time it takes the algorithm to run, as a function of the size of the input. The space complexity of an algorithm is the amount of memory the algorithm uses, as a function of the size of the input.
 
-### Real World Code Example
+The time complexity of the sum function is O(n), where n is the number of numbers in the list. This is because the function iterates over the list of numbers once for each number in the list. The space complexity of the sum function is O(1), since the function only uses a constant amount of space to store the list of numbers and the sum of the numbers.
 
-The following code shows a real-world example of an algorithm that is used to sort a list of numbers:
-
-```java
-public class QuickSort {
-
-  public static void sort(int[] numbers) {
-    if (numbers.length <= 1) {
-      return;
-    }
-
-    int pivot = numbers[numbers.length / 2];
-    int left = 0;
-    int right = numbers.length - 1;
-
-    while (left <= right) {
-      while (numbers[left] < pivot) {
-        left++;
-      }
-      while (numbers[right] > pivot) {
-        right--;
-      }
-
-      if (left <= right) {
-        int temp = numbers[left];
-        numbers[left] = numbers[right];
-        numbers[right] = temp;
-
-        left++;
-        right--;
-      }
-    }
-
-    quickSort(numbers, 0, left - 1);
-    quickSort(numbers, right + 1, numbers.length - 1);
-  }
-}
-```
-
-The time complexity of this algorithm is O(n log n), where n is the number of numbers in the list. This is because the algorithm has to divide the list in half and then recursively sort the two halves.
-
-The space complexity of this algorithm is O(log n), because it requires a constant amount of memory to store the pivot and the two halves of the list.
+The time complexity of the bubble sort algorithm is O(n2), where n is the number of numbers in the list. This is because the algorithm compares each pair of adjacent numbers in the list, and there are n such pairs. The space complexity of the bubble sort algorithm is O(1), since the algorithm only uses a constant amount of space to store the list of numbers.
