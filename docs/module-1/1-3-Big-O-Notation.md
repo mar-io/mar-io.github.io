@@ -7,7 +7,7 @@ Big O notation is a mathematical notation used to describe the performance of an
 
 Here's an example of a simple algorithm in Java that demonstrates different Big O complexities.
 
-\```java
+```java
 public class BigONotation {
 
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class BigONotation {
         }
     }
 }
-\```
+```
 
 **Explanation**: In this example, we have three code snippets demonstrating different Big O complexities. The first one retrieves the first element of the array, which takes constant time, O(1). The second one iterates through the array and prints each element, which takes linear time, O(n). The third one prints all possible pairs of elements in the array, which takes quadratic time, O(n^2).
 
@@ -37,7 +37,7 @@ public class BigONotation {
 
 The following code demonstrates a binary search algorithm, which has a time complexity of O(log n):
 
-\```java
+```java
 public class BinarySearch {
 
     public static void main(String[] args) {
@@ -71,6 +71,6 @@ public class BinarySearch {
         return -1;
     }
 }
-\```
+```
 
 **Explanation**: In this real-world example, we use a binary search algorithm to find the index of a target element in a sorted array. The binary search algorithm repeatedly divides the search interval in half, effectively reducing the search space by a factor of two with each step. This results in a time complexity of O(log n). The space complexity is O(1) because we only use a few constant-size variables.
