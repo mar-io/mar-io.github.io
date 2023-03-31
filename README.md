@@ -5,7 +5,7 @@ This e-book covers the essential data structures and algorithms using Java code 
 ## Module 1: Introduction to Data Structures and Algorithms
 
 #### 1.1: Importance of data structures and algorithms
-- [1.1    Intro]((/docs/1-1-Importance-of-data-structures-and-algorithms.md))
+- [1.1    Intro](docs/1-1-Importance-of-data-structures-and-algorithms.md)
 - 1.1.1: Software optimization
 - 1.1.2: Efficient resource utilization
 - 1.1.3: Real-world example: Algorithm selection in various industries
