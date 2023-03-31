@@ -11,7 +11,7 @@ This e-book covers the essential data structures and algorithms using Java code 
 - 1.1.3: Real-world example: Algorithm selection in various industries
 
 #### 1.2: Time and space complexity analysis with Big O notation
-
+- [1.2    Intro](/docs/module-1/1-2-Time-and-Space-Complexity-Analysis-with-Big-O-Notation.md)
 - 1.2.1: Asymptotic analysis
 - 1.2.2: Best, average, and worst-case complexities
 - 1.2.3: Time complexity
@@ -19,7 +19,7 @@ This e-book covers the essential data structures and algorithms using Java code 
 - 1.2.5: Real-world example: Comparing performance of different algorithms for the same problem and analyzing time complexity of various searching and sorting algorithms
 
 #### 1.3: Complexity Classes
-
+- [1.3    Intro](/docs/module-1/1-3-Complexity-Classes.md)
 - 1.3.1: P, NP, NP-Complete, NP-Hard
 - 1.3.2: Examples of problems in each class
 - 1.3.3: Real-world example: Algorithm complexity in search engines and cryptography
