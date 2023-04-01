@@ -8,7 +8,7 @@ I have put together an e-book on Data Structures and Algorithms using Java. This
 
 Click the link below to access the e-book:
 
-[**Data Structures and Algorithms with Java E-Book**]
+[**Data Structures and Algorithms with Java E-Book**](/ebook/Data-Structure-and-Algorithms-w-java.md)
 
 ## My Personal Blog :pencil:
 
