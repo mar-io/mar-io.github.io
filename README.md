@@ -1,6 +1,6 @@
 # Welcome to My GitHub Page!
 
-Hello there! :smiley: Welcome to my GitHub page where you can find the projects I'm working on and learn more about me. My name is Mario, and I am currently a Site Reliability Engineering Lead at Apple. Feel free to explore and don't hesitate to reach out if you have any questions or would like to collaborate.
+Hello there! Welcome to my GitHub page where you can find the projects I'm working on and learn more about me. My name is Mario, and I am currently a Site Reliability Engineering Lead at Apple. Feel free to explore and don't hesitate to reach out if you have any questions or would like to collaborate.
 
 ## Data Structures and Algorithms with Java E-Book
 
