@@ -5,10 +5,10 @@ This e-book covers the essential data structures and algorithms using Java code 
 ## Module 1: Introduction to Data Structures and Algorithms
 
 #### 1.1: Importance of data structures and algorithms
-- [1.1    Intro](/docs/module-1/1-1-Importance-of-data-structures-and-algorithms.md)
-- [1.1.1: Software optimization](/docs/module-1/1-1-1-Software-Optimization.md)
-- [1.1.2: Efficient resource utilization](/docs/module-1/1-1-2-Efficient-Resource-Utilization.md)
-- [1.1.3: Real-world example: Algorithm selection in various industries](/docs/module-1/1-1-3-Real-world-example-Algorithm-selection-in-various-industries.md)
+- [1.1    Intro](/ebook/docs/module-1/1-1-Importance-of-data-structures-and-algorithms.md)
+- [1.1.1: Software optimization](/ebook/docs/module-1/1-1-1-Software-Optimization.md)
+- [1.1.2: Efficient resource utilization](/ebook/docs/module-1/1-1-2-Efficient-Resource-Utilization.md)
+- [1.1.3: Real-world example: Algorithm selection in various industries](/ebook/docs/module-1/1-1-3-Real-world-example-Algorithm-selection-in-various-industries.md)
 
 #### 1.2: Time and space complexity analysis with Big O notation
 - [1.2    Intro](/docs/module-1/1-2-Time-and-Space-Complexity-Analysis-with-Big-O-Notation.md)
