@@ -5,18 +5,18 @@ This e-book covers the essential data structures and algorithms using Java code 
 ## Module 1: Introduction to Data Structures and Algorithms
 
 #### 1.1: Importance of data structures and algorithms
-- [1.1    Intro](/ebook/docs/module-1/1-1-Importance-of-data-structures-and-algorithms.md)
-- [1.1.1: Software optimization](/ebook/docs/module-1/1-1-1-Software-Optimization.md)
-- [1.1.2: Efficient resource utilization](/ebook/docs/module-1/1-1-2-Efficient-Resource-Utilization.md)
-- [1.1.3: Real-world example: Algorithm selection in various industries](/ebook/docs/module-1/1-1-3-Real-world-example-Algorithm-selection-in-various-industries.md)
+- [1.1    Intro](/docs/module-1/1-1-Importance-of-data-structures-and-algorithms.md)
+- [1.1.1: Software optimization](/docs/module-1/1-1-1-Software-Optimization.md)
+- [1.1.2: Efficient resource utilization](/docs/module-1/1-1-2-Efficient-Resource-Utilization.md)
+- [1.1.3: Real-world example: Algorithm selection in various industries](/docs/module-1/1-1-3-Real-world-example-Algorithm-selection-in-various-industries.md)
 
 #### 1.2: Time and space complexity analysis with Big O notation
 - [1.2    Intro](/docs/module-1/1-2-Time-and-Space-Complexity-Analysis-with-Big-O-Notation.md)
-- 1.2.1: Asymptotic analysis
-- 1.2.2: Best, average, and worst-case complexities
-- 1.2.3: Time complexity
-- 1.2.4: Space complexity
-- 1.2.5: Real-world example: Comparing performance of different algorithms for the same problem and analyzing time complexity of various searching and sorting algorithms
+- [1.2.1: Asymptotic analysis](/docs/module-1/1-2-1-Asymptotic-Analysis.md)
+- [1.2.2: Best, average, and worst-case complexities](/docs/module-1/1-2-2-Best-average-and-worst-case-complexities.md)
+- [1.2.3: Time complexity](/docs/module-1/1-2-3-Time-Complexity.md)
+- [1.2.4: Space complexity](/docs/module-1/1-2-4-Space-Complexity.md)
+- [1.2.5: Real-world example: Comparing performance of different algorithms for the same problem and analyzing time complexity of various searching and sorting algorithms](/docs/module-1/1-2-5-RealWorldExample.md)
 
 #### 1.3: Complexity Classes
 - [1.3    Intro](/docs/module-1/1-3-Complexity-Classes.md)
