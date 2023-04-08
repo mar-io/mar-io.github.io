@@ -40,4 +40,3 @@ Total interest for a 5-year car loan of $20,000: $640.0
 ```
 
 This example demonstrates how a bank can use two-dimensional arrays to manage and calculate interest rates for different loan types and tenures. In practice, banks would work with more complex data structures and algorithms to account for factors like credit scores and market trends.
-
