@@ -1,51 +1,43 @@
-### 2.1.4: Real-world example: Image processing using multidimensional arrays
+### 2.1.4: Real-world example: Loan interest calculation using two-dimensional arrays
 
-Multidimensional arrays, particularly two-dimensional arrays, have many practical applications. One of the most common uses is in image processing. Images are usually represented as grids of pixels, and each pixel has a color value. In this scenario, a two-dimensional array can be used to store and manipulate the pixel data.
+Two-dimensional arrays have numerous practical applications in various industries, including the financial sector. In this example, we will explore how a bank might use two-dimensional arrays to manage and calculate loan interest rates for different loan types and tenures.
 
-#### Easy-to-understand description
-
-Think of an image as a grid of pixels, where each pixel has a specific color. In image processing, we often need to manipulate these pixels in various ways, such as modifying the colors, resizing the image, or applying filters. A two-dimensional array is a natural choice for representing the image as a grid, where each element of the array corresponds to a pixel in the image. The row and column indices of the array represent the pixel's position in the image.
+Banks often offer different types of loans, such as personal loans, car loans, and home loans, with varying interest rates depending on the loan tenure. These interest rates can be represented using a two-dimensional array, where rows represent different loan types, and columns represent different loan tenures. By indexing the two-dimensional array, the bank can easily access and calculate the interest rate for a specific loan type and tenure.
 
 #### Practical Java code example
 
-Let's create a simple Java example that demonstrates how to create a two-dimensional array representing a grayscale image and invert the pixel values. In this example, we will represent the grayscale values as integers ranging from 0 (black) to 255 (white).
+Let's create a Java example that demonstrates how to use a two-dimensional array to represent interest rates for different loan types and tenures and calculate the total interest for a given loan amount.
 
 ```java
-public class ImageProcessingExample {
+public class BankLoanInterestExample {
     public static void main(String[] args) {
-        // Declare and initialize a 3x3 grayscale image
-        int[][] image = {
-            {0, 128, 255},
-            {64, 192, 32},
-            {240, 16, 128}
+        // Declare and initialize interest rates for different loan types and tenures
+        double[][] interestRates = {
+            {0.03, 0.035, 0.04}, // Personal loan interest rates for 1, 3, and 5-year tenures
+            {0.025, 0.03, 0.032}, // Car loan interest rates for 1, 3, and 5-year tenures
+            {0.02, 0.023, 0.025}  // Home loan interest rates for 1, 3, and 5-year tenures
         };
 
-        // Invert the pixel values in the image
-        for (int row = 0; row < image.length; row++) {
-            for (int col = 0; col < image[row].length; col++) {
-                image[row][col] = 255 - image[row][col];
-            }
-        }
+        // Example: Calculate total interest for a 5-year car loan of $20,000
+        int loanType = 1; // Car loan
+        int tenureIndex = 2; // 5-year tenure
+        double loanAmount = 20000;
 
-        // Print the inverted image
-        for (int row = 0; row < image.length; row++) {
-            for (int col = 0; col < image[row].length; col++) {
-                System.out.print(image[row][col] + " ");
-            }
-            System.out.println(); // Print a newline after each row
-        }
+        double interestRate = interestRates[loanType][tenureIndex];
+        double totalInterest = loanAmount * interestRate;
+
+        System.out.println("Total interest for a 5-year car loan of $20,000: $" + totalInterest);
     }
 }
 ```
 
-In this example, we declare and initialize a 3x3 grayscale image using a two-dimensional array called `image`. Each element of the array represents the grayscale value of a pixel. We then iterate through the `image` array using nested loops and invert the pixel values by subtracting them from 255. Finally, we print the inverted image.
+In this example, we declare and initialize a two-dimensional array called `interestRates` to represent the interest rates for different loan types and tenures. We then specify the loan type, tenure index, and loan amount for a 5-year car loan of $20,000. We calculate the total interest by accessing the interest rate from the `interestRates` array using the loan type and tenure index and multiplying it by the loan amount. Finally, we print the total interest.
 
 When you run this code, the output will be:
 
 ```
-255 127 0
-191 63 223
-15 239 127
+Total interest for a 5-year car loan of $20,000: $640.0
 ```
 
-This is a simple example of using multidimensional arrays for image processing in Java. In more advanced image processing applications, you would typically work with larger arrays and more complex operations.
+This example demonstrates how a bank can use two-dimensional arrays to manage and calculate interest rates for different loan types and tenures. In practice, banks would work with more complex data structures and algorithms to account for factors like credit scores and market trends.
+
