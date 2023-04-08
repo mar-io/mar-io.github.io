@@ -2,8 +2,6 @@
 
 Multidimensional arrays are arrays of arrays, which means that each element of a multidimensional array is itself an array. In Java, the most commonly used multidimensional array is a two-dimensional (2D) array, which can be thought of as a table with rows and columns.
 
-#### Easy-to-understand description
-
 A two-dimensional array is like a matrix or a grid, where you have rows and columns to store data. It can be visualized as a table or a spreadsheet with a specific number of rows and columns. Each cell in the table stores a value, and you can access the value by specifying the row and column index.
 
 #### Practical Java code example
